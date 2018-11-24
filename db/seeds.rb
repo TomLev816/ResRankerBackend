@@ -11,7 +11,7 @@ require "optparse"
 require 'pry'
 
 
-user = User.create(first: 'name', last:'lastname', username: 'yaboi', restaurants_visited: 50, image_src: 'tom.com', total_restaurants_ranked: 12)
+user = User.create(first: 'Barack', last:'Obama', username: 'a', restaurants_visited: 4, image_src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/960px-President_Barack_Obama.jpg', total_restaurants_ranked: 3)
 
 
 
@@ -63,5 +63,15 @@ end #end of add_restaurants
 
 add_restaurants()
 
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 1, ranking: 5)
-visit = Visit.create(user_id: 1, restaurant_id: 1, date: 'monday', comment:'it was bad')
+ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 1, ranking: 1)
+ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 2, ranking: 3)
+ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 3, ranking: 4)
+ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 4, ranking: 5)
+ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 5, ranking: 2)
+
+visit = Visit.create(user_id: 1, restaurant_id: 1, date: '11/1/18', comment:'it was amazing')
+visit = Visit.create(user_id: 1, restaurant_id: 2, date: '11/2/18', comment:'its ws n mela')
+visit = Visit.create(user_id: 1, restaurant_id: 3, date: '11/4/18', comment:'some ogf the goor eaf eataible')
+visit = Visit.create(user_id: 1, restaurant_id: 1, date: '11/12/18', comment:'lorems itso puaot mand')
+visit = Visit.create(user_id: 1, restaurant_id: 4, date: '11/14/18', comment:'some ogf the goor I rmka thwn f eataible')
+visit = Visit.create(user_id: 1, restaurant_id: 5, date: '11/20/18', comment:'some ogf the goor eaf jkalee eataible')
