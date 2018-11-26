@@ -39,18 +39,18 @@ ActiveRecord::Schema.define(version: 2018_11_20_205807) do
     t.string "first"
     t.string "last"
     t.string "username"
-    t.integer "restaurants_visited"
+    t.integer "visit_count"
     t.string "image_src"
-    t.integer "total_restaurants_ranked"
+    t.integer "restaurants_ranked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "visits", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "restaurant_id"
+    t.integer "user_restaurant_ranking_id"
     t.string "date"
     t.string "comment"
+    t.string "meal_eaten"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

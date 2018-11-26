@@ -37,7 +37,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:first, :last, :username, :restaurants_visited, :image_src, :total_restaurants_ranked)
+    params.permit(:first, :last, :username, :visit_count, :image_src, :restaurants_ranked)
   end
 
 end

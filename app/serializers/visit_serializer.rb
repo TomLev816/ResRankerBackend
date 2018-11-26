@@ -1,5 +1,7 @@
 class VisitSerializer < ActiveModel::Serializer
-  attributes :id, :restaurant_id, :user_id, :date, :comment
+  attributes :id, :user_restaurant_ranking_id, :date, :comment, :meal_eaten
   # belongs_to :user
-  belongs_to :restaurant
+  # has_one :user, through: :user_restaurant_ranking
+  # has_one :restaurant, through: :user_restaurant_ranking
+  # belongs_to :user_restaurant_ranking
 end
