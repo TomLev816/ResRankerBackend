@@ -10,16 +10,16 @@ require "json"
 require "optparse"
 require 'pry'
 
-puts "start User"
-user = User.create(
-  first: 'Barack',
-  last:'Obama',
-  username: 'a',
-  visit_count: 0,
-  image_src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/960px-President_Barack_Obama.jpg',
-  restaurants_ranked: 0
-)
-puts user
+# puts "start User"
+# user = User.create(
+#   first: 'Barack',
+#   last:'Obama',
+#   username: 'a',
+#   visit_count: 0,
+#   image_src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/960px-President_Barack_Obama.jpg',
+#   restaurants_ranked: 0
+# )
+# puts user
 
 
 
@@ -71,26 +71,26 @@ end #end of add_restaurants
 
 add_restaurants()
 
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 1, ranking: 1)
-puts ranking
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 2, ranking: 3)
-puts ranking
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 3, ranking: 4)
-puts ranking
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 4, ranking: 5)
-puts ranking
-ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 5, ranking: 2)
-puts ranking
+# ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 1, ranking: 1)
+# puts ranking
+# ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 2, ranking: 3)
+# puts ranking
+# ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 3, ranking: 4)
+# puts ranking
+# ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 4, ranking: 5)
+# puts ranking
+# ranking = UserRestaurantRanking.create(user_id: 1 , restaurant_id: 5, ranking: 2)
+# puts ranking
 
-visit = Visit.create(user_restaurant_ranking_id: 1, date: '11/1/18', comment:'it was amazing', meal_eaten: 'steak')
-puts visit
-visit = Visit.create(user_restaurant_ranking_id: 2, date: '11/2/18', comment:'its ws n mela', meal_eaten: 'pasta')
-puts visit
-visit = Visit.create(user_restaurant_ranking_id: 3, date: '11/4/18', comment:'some ogf the goor eaf eataible', meal_eaten: 'soda')
-puts visit
-visit = Visit.create(user_restaurant_ranking_id: 1, date: '11/12/18', comment:'lorems itso puaot mand', meal_eaten: 'steak')
-puts visit
-visit = Visit.create(user_restaurant_ranking_id: 4, date: '11/14/18', comment:'some ogf the goor I rmka thwn f eataible', meal_eaten: 'sushi')
-puts visit
-visit = Visit.create(user_restaurant_ranking_id: 5, date: '11/20/18', comment:'some ogf the goor eaf jkalee eataible', meal_eaten: 'shrimp')
-puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 1, date: '11/1/18', comment:'it was amazing', meal_eaten: 'steak')
+# puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 2, date: '11/2/18', comment:'its ws n mela', meal_eaten: 'pasta')
+# puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 3, date: '11/4/18', comment:'some ogf the goor eaf eataible', meal_eaten: 'soda')
+# puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 1, date: '11/12/18', comment:'lorems itso puaot mand', meal_eaten: 'steak')
+# puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 4, date: '11/14/18', comment:'some ogf the goor I rmka thwn f eataible', meal_eaten: 'sushi')
+# puts visit
+# visit = Visit.create(user_restaurant_ranking_id: 5, date: '11/20/18', comment:'some ogf the goor eaf jkalee eataible', meal_eaten: 'shrimp')
+# puts visit

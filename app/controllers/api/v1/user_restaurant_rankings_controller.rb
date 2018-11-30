@@ -26,7 +26,7 @@ class Api::V1::UserRestaurantRankingsController < ApplicationController
   def update
     @user_restaurant_ranking = UserRestaurantRanking.find(params[:id])
     @user_restaurant_ranking.update(user_restaurant_ranking_params)
-    render json: @user_restaurant_ranking, status: :updated
+    render json: @user_restaurant_ranking
   end
 
   def destroy
