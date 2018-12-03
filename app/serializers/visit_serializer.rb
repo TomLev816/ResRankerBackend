@@ -7,6 +7,7 @@ class VisitSerializer < ActiveModel::Serializer
   def image_url
     return rails_blob_url(object.image)
   end
+  
   # belongs_to :user
   # has_one :user, through: :user_restaurant_ranking
   # has_one :restaurant, through: :user_restaurant_ranking
