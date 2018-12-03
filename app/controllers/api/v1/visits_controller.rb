@@ -15,8 +15,16 @@ class Api::V1::VisitsController < ApplicationController
   end
 
   def create
-    @visit = Visit.create(visit_params)
-    render json: @visit, status: :created
+    # byebug
+    @visit = Visit.new(JSON.parse(visit_params[:visitData]))
+    @visit.image.attach(visit_params[:image])
+
+    if @visit.save
+     render json: @visit, status: :ok
+    else
+     render json: nil, status: 500
+    end
+
   end
 
   def edit
@@ -37,8 +45,9 @@ class Api::V1::VisitsController < ApplicationController
 
   private
 
+
   def visit_params
-    params.permit(:user_id, :restaurant_id, :date, :comment, :meal_eaten)
+    params.permit(:user_id, :restaurant_id, :date, :comment, :meal_eaten, :image, :visitData)
   end
 
 end
