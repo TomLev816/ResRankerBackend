@@ -47,7 +47,8 @@ ActiveRecord::Schema.define(version: 2018_11_20_205807) do
   end
 
   create_table "visits", force: :cascade do |t|
-    t.integer "user_restaurant_ranking_id"
+    t.integer "user_id"
+    t.integer "restaurant_id"
     t.string "date"
     t.string "comment"
     t.string "meal_eaten"

@@ -38,7 +38,7 @@ class Api::V1::VisitsController < ApplicationController
   private
 
   def visit_params
-    params.permit(:user_restaurant_ranking_id, :date, :comment, :meal_eaten)
+    params.permit(:user_id, :restaurant_id, :date, :comment, :meal_eaten)
   end
 
 end

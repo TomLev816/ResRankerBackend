@@ -6,11 +6,15 @@ class UserSerializer < ActiveModel::Serializer
 
   class UserRestaurantRankingSerializer < ActiveModel::Serializer
     attributes :id, :restaurant_id, :user_id, :ranking
-    has_many :visits
     belongs_to :restaurant
 
     class RestaurantSerializer < ActiveModel::Serializer
       attributes :id, :name, :address, :cuisine, :location_lat, :location_long, :visitors, :image_src
     end
   end
+
+  class VisitSerializer < ActiveModel::Serializer
+    attributes :id, :user_id, :restaurant_id, :date, :comment, :meal_eaten
+  end
+
 end
