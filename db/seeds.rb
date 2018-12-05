@@ -47,10 +47,10 @@ end
 
 def add_restaurants()
   offset = 0
-  while offset < 100
-    search_result = search("restaurants", 'New York City', offset)
+  while offset < 50
+    search_result = search("bars", 'nyc', offset)
     i = 0
-    while i < 50
+    while i < 10
       name = search_result["businesses"][i]["name"]
       display_address = search_result["businesses"][i]["location"]["display_address"][0]
       category = search_result["businesses"][i]["categories"][0]["alias"]
@@ -61,6 +61,7 @@ def add_restaurants()
       if Restaurant.exists?(name: name)
         i += 1
       else
+        puts "#{name}"
         Restaurant.create(name: name, address: display_address, cuisine: category, location_lat: latitude, location_long: longitude, visitors:0, image_src: image_url)
         i += 1
       end #end of if
