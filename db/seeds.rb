@@ -47,7 +47,7 @@ end
 
 def add_restaurants()
   offset = 0
-  while offset < 50
+  while offset < 500
     search_result = search("bars", 'nyc', offset)
     i = 0
     while i < 10

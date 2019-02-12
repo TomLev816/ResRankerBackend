@@ -37,11 +37,11 @@ class Api::V1::VisitsController < ApplicationController
     render json: @visit
   end
 
-  def destroy
-    @visit = Visit.find(params[:id])
-    @visit.destroy
-    head :no_content
-  end
+  # def destroy
+  #   @visit = Visit.find(params[:id])
+  #   @visit.destroy
+  #   head :no_content
+  # end
 
   private
 

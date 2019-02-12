@@ -29,12 +29,6 @@ class Api::V1::RestaurantsController < ApplicationController
     render json: @restaurant
   end
 
-  def destroy
-    @restaurant = Restaurant.find(params[:id])
-    @restaurant.destroy
-    head :no_content
-  end
-
   private
 
   def restaurant_params

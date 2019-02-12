@@ -29,11 +29,11 @@ class Api::V1::UserRestaurantRankingsController < ApplicationController
     render json: @user_restaurant_ranking
   end
 
-  def destroy
-    @user_restaurant_ranking = UserRestaurantRanking.find(params[:id])
-    @user_restaurant_ranking.destroy
-    head :no_content
-  end
+  # def destroy
+  #   @user_restaurant_ranking = UserRestaurantRanking.find(params[:id])
+  #   @user_restaurant_ranking.destroy
+  #   head :no_content
+  # end
 
   private
 
