@@ -15,7 +15,11 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    render json: @user, status: :created
+    if @user.valid?
+      render json: @user, status: :created
+    else
+      render json: {error: 'failed to create user' }, status: :not_acceptable
+    end
   end
 
   def edit
@@ -37,7 +41,7 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:first, :last, :username, :visit_count, :image_src, :restaurants_ranked)
+    params.permit(:first, :last, :username, :password, :visit_count, :image_src, :restaurants_ranked)
   end
 
 end
